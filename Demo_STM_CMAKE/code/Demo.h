@@ -18,5 +18,5 @@ void uartReceive();
 void sendLine(struct coord coord_1, struct coord coord_2);
 void checkJoystick();
 void drawTask();
-
+void SystemState();
 #endif

@@ -92,63 +92,63 @@ file(GLOB UGFX_SRCS
 )
 
 #can use find_program multiple times on same target. First hit will be used. Allows randomly searching at (our) default locations.
-find_program(ARM_GCC arm-none-eabi-gcc /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_GCC arm-none-eabi-gcc ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_GCC arm-none-eabi-gcc ${CURRENT_PATH}/../../../bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_GCC arm-none-eabi-gcc /DIST/it/sw/amd64/gcc-arm/gcc/bin/ NO_DEFAULT_PATH)
 find_program(ARM_GCC arm-none-eabi-gcc NO_DEFAULT_PATH)
 find_program(ARM_GCC arm-none-eabi-gcc)
 message("ARM_GCC= ${ARM_GCC}")
 
-find_program(ARM_GCXX arm-none-eabi-g++ /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_GCXX arm-none-eabi-g++ ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_GCXX arm-none-eabi-g++ ${CURRENT_PATH}/../../../bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_GCXX arm-none-eabi-g++ /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_GCXX arm-none-eabi-g++ NO_DEFAULT_PATH)
 find_program(ARM_GCXX arm-none-eabi-g++)
 message("ARM_GCXX= ${ARM_GCXX}")
 
-find_program(ARM_LINKER arm-none-eabi-ld /home/ksai/espl-toolchain//bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_LINKER arm-none-eabi-ld ${HOME}/espl-toolchain//bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_LINKER arm-none-eabi-ld /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_LINKER arm-none-eabi-ld NO_DEFAULT_PATH)
 find_program(ARM_LINKER arm-none-eabi-ld)
 message("ARM_LINKER= ${ARM_LINKER}")
 
-find_program(ARM_OBJCOPY arm-none-eabi-objcopy /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_OBJCOPY arm-none-eabi-objcopy ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_OBJCOPY arm-none-eabi-objcopy /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_OBJCOPY arm-none-eabi-objcopy NO_DEFAULT_PATH)
 find_program(ARM_OBJCOPY arm-none-eabi-objcopy)
 message("ARM_OBJCOPY= ${ARM_OBJCOPY}")
 
-find_program(ARM_OBJDUMP arm-none-eabi-objdump /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_OBJDUMP arm-none-eabi-objdump ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_OBJDUMP arm-none-eabi-objdump /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_OBJDUMP arm-none-eabi-objdump NO_DEFAULT_PATH)
 find_program(ARM_OBJDUMP arm-none-eabi-objdump)
 message("ARM_OBJDUMP= ${ARM_OBJDUMP}")
 
-find_program(ARM_AR arm-none-eabi-ar /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_AR arm-none-eabi-ar ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_AR arm-none-eabi-ar /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_AR arm-none-eabi-ar NO_DEFAULT_PATH)
 find_program(ARM_AR arm-none-eabi-ar)
 message("ARM_AR= ${ARM_AR}")
 
-find_program(ARM_RANLIB arm-none-eabi-ranlib /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_RANLIB arm-none-eabi-ranlib ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_RANLIB arm-none-eabi-ranlib /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_RANLIB arm-none-eabi-ranlib NO_DEFAULT_PATH)
 find_program(ARM_RANLIB arm-none-eabi-ranlib)
 message("ARM_RANLIB= ${ARM_RANLIB}")
 
-find_program(ARM_SIZE arm-none-eabi-size /home/ksai/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
+find_program(ARM_SIZE arm-none-eabi-size ${HOME}/espl-toolchain/bin/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_SIZE arm-none-eabi-size /DIST/it/sw/amd64/gcc-arm/gcc/bin NO_DEFAULT_PATH)
 find_program(ARM_SIZE arm-none-eabi-size NO_DEFAULT_PATH)
 find_program(ARM_SIZE arm-none-eabi-size)
 message("ARM_SIZE= ${ARM_SIZE}")
 
-find_program(ST_FLASH st-flash /home/ksai/espl-toolchain/bin/gcc-arm/stlink NO_DEFAULT_PATH)
+find_program(ST_FLASH st-flash ${HOME}/espl-toolchain/bin/gcc-arm/stlink NO_DEFAULT_PATH)
 find_program(ST_FLASH st-flash /DIST/it/sw/amd64/gcc-arm/stlink NO_DEFAULT_PATH)
 find_program(ST_FLASH st-flash NO_DEFAULT_PATH)
 find_program(ST_FLASH st-flash)
 message("ST_FLASH= ${ST_FLASH}")
 
-message(/home/ksai)
+message(${HOME})
 
 set(CMAKE_C_FLAGS "-mcpu=cortex-m4 -march=armv7e-m -mtune=cortex-m4 -mlittle-endian -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -std=c99 -Wall -Wunused-value -O3 -ffast-math -ffunction-sections -fdata-sections -Wl,--gc-sections -fno-common --param max-inline-insns-single=1000 -DUSE_STDPERIPH_DRIVER -DGFX_USE_OS_FREERTOS=TRUE -DSTM32F429_439xx=TRUE -g")
 

@@ -1,0 +1,8 @@
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/Demo.bin.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/Demo.elf.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/flash.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/rtoslib.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/stmperipheralslib.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/stmutilitieslib.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/ugfxlib.dir
+/home/ksai/espl_workspace/ESPL/builddir/CMakeFiles/usrlib.dir
